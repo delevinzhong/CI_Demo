@@ -1,0 +1,15 @@
+
+192.168.30.32:8085    192.168.30.35:8085    192.168.30.36:8085
+Artifactory           Hadoop Master         Hadoop Node1
+                      Bamboo
+                      Bamboo Agent
+                      
+                     
+Artifactory account:
+Username      Password
+delevinzhong  zwkobe+1224
+admin         zwkobe+1224
+
+Bamboo account:
+Username      Password
+zhongd1       zhongd1
