@@ -17,7 +17,7 @@ echo bamboo.home=$bambooHome >> $bambooHome/atlassian-bamboo/WEB-INF/classes/bam
 sh $bambooHome/bin/start-bamboo.sh
 
 if [ $? -eq 0 ];then
-echo "\033[33mInstalling finished, please go to http://localhose:8085 to check\033[0m"
+echo -e "\033[33mInstalling finished, please go to http://localhose:8085 to check\033[0m"
 fi
 
 
