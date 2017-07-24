@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+<localRepository>/tmp/maven-repository/repositoryqa</localRepository>
+
+
+
+  <pluginGroups>
+
+    <pluginGroup>anz-repository-group</pluginGroup>
+
+  </pluginGroups>
+
+
+
+  <servers>
+
+    <server>
+      <id>maven atifactory</id>
+      <username>zhaoc3</username>
+      <!--<password>AKCp2V6x2gSFZUXzUapuNXHuJ9mf6965ZmbRnwoeJVGftGbQhq1Si45mZKmf9xQRL1Aj7n7Th</password> -->
+          <password>AKCp2VpQ6BZyrwUJddPG2tV6FVHaDJqERDpfRAc4cdbmSb8AaLLXPKErWJaj6cWMFXQkjQrXW</password>
+          <filePermissions>664</filePermissions>
+      <directoryPermissions>775</directoryPermissions>
+
+    </server>
+
+
+
+  <server>
+
+    <username>line7</username>
+
+    <password>line7</password>
+
+    <id>central-mirror</id>
+
+  </server>
+
+  <server>
+
+    <username>line7</username>
+
+    <password>line7</password>
+
+    <id>fitRelease</id>
+
+  </server>
+
+  <server>
+
+    <username>line7</username>
+
+    <password>PastePasswordHere</password>
+
+    <id>fitSnapshot</id>
+
+  </server>
+
+
+
+
+  </servers>
+
+
+
+  <mirrors>
+
+    <mirror>
+      <id>maven atifactory</id>
+      <mirrorOf>*</mirrorOf>
+      <name>maven atifactory</name>
+      <url>https://artifactory.service.anz/artifactory/repo1</url>
+    </mirror>
+
+  </mirrors>
+
+
+
+  <profiles>
+   <profile>
+      <id>anz-repository-repo</id>
+      <repositories>
+        <repository>
+          <id>anz-repository-group</id>
+          <name>ANZ Artifactory Repository</name>
+          <url>https://artifactory.service.anz/artifactory/repo1</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </snapshots>
+        </repository>
+      </repositories>
+   </profile>
+  </profiles>
+
+  <!-- activeProfiles
+          | List of profiles that are active for all builds.
+   |-->
+  <activeProfiles>
+    <activeProfile>anz-repository-repo</activeProfile>
+  </activeProfiles>
+
+</settings>
