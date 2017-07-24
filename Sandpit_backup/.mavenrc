@@ -1,0 +1,5 @@
+MAVEN_OPTS="-Xmx512m -Djavax.net.ssl.trustStore=/home/git/.keystore \
+                     -Djavax.net.ssl.trustStorePassword=changeit  \
+                     -Djavax.net.ssl.keyStore=/home/git/.keystore \
+                     -Djavax.net.ssl.keyStoreType=jks \
+                     -Djavax.net.ssl.keyStorePassword=changeit"
